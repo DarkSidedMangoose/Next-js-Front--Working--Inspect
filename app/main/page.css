@@ -11,7 +11,6 @@
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  background-color: #bead9f5c;
 }
 .grid-1-element {
   grid-column: 1;

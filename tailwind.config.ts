@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import aspectRatio from "@tailwindcss/aspect-ratio";
 
 export default {
   content: [
@@ -16,10 +17,16 @@ export default {
         "bottom-right": "5px 5px 15px rgba(0, 0, 0, 0.3)",
       },
       colors: {
-        background: "var(--background)",
+        background: "#bead9f5c",
+        colorLightGreen: "#C1C08E",
+        colorBrown: "#281B0D",
+        mainTextCol: "#734646",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    aspectRatio,
+    // ...
+  ], // ...
 } satisfies Config;

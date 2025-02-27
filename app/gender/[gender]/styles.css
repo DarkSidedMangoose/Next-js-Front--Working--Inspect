@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Vintage";
+  src: url("/fonts/vintage.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-vintage {
+  font-family: "Vintage" !important;
+}
+
+.placeholder-style::placeholder {
+  color: #734646;
+}
+.grid-section {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1.3fr 1.3fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Genders-first {
+  grid-column: 1/3;
+}
+.Genders-second {
+  grid-column: 1/3;
+}
+.Genders-third {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.Genders-fourth {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.Genders-fifth {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.Genders-sixth {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
