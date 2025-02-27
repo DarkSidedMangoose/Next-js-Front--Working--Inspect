@@ -1,8 +1,20 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function Home() {
-  console.log("what am i doing here");
+  const navigate = useRouter();
+
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(e);
+  };
   return (
     <div>
-      <h1>hello my name is</h1>
+      <button onClick={() => navigate.push("/dashboard")}>sada</button>
+      <form onSubmit={submitHandler}>
+        <input type="text" className="border-2 border-black" />
+      </form>
     </div>
   );
 }

@@ -1,0 +1,19 @@
+{
+  "news": [
+    {
+      "id": 0,
+      "title": "News Article 1",
+      "description": "sports"
+    },
+    {
+      "id": 1,
+      "title": "los",
+      "description": "fuckit"
+    },
+    {
+      "id": 2,
+      "title": "los",
+      "description": "fuckit"
+    }
+  ]
+}
