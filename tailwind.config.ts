@@ -10,7 +10,9 @@ export default {
   theme: {
     extend: {
       screens: {
+        null: "0px",
         xs: "360px", // Custom breakpoint for extra-small devices
+        xsToMedium: "510px",
       },
       boxShadow: {
         "left-top": "-5px -5px 15px rgba(0, 0, 0, 0.3)",
