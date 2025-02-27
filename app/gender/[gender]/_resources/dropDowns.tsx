@@ -14,7 +14,11 @@ const DropDowns: React.FC<DropDownSizesProps> = ({
   onChange,
 }) => {
   return (
-    <div className="relative  w-[calc(100%-0.75rem)] h-5/6 text-lg ml-3 flex ">
+    <div
+      className={`relative ${
+        whichOne === "size" ? "w-[calc(100%-0.75rem)]" : "w-[calc(100%-1.5rem)]"
+      }  h-5/6 text-lg ml-3 flex `}
+    >
       <select
         value={selected}
         onChange={onChange}

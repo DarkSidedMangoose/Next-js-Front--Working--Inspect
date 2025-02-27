@@ -126,8 +126,13 @@ const GenderProduct: React.FC<GenderProductProps> = ({ params }) => {
             onChange={handleChangeModels}
           />
         </div>
-        <div className="w-full h-full flex  Genders-sixth ">
-          <div className=""></div>
+        <div className="w-full h-full flex  Genders-sixth justify-center items-center ">
+          <button
+            type="submit"
+            className="w-[calc(100%-1.5rem)] h-[68%] text-lg bg-[#ffffffa0] rounded-lg"
+          >
+            submit
+          </button>
         </div>
       </section>
       <main></main>
