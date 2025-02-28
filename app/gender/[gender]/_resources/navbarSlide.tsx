@@ -14,7 +14,7 @@ const NavbarSlide: React.FC<{
           : navbarClicked === false
           ? "animation-back"
           : "hidden"
-      } text-2xl  h-full right-0 fixed z-10 bg-[#734646] w-[70%]   text-colorLightGreen  flex-col   `}
+      } text-2xl  top-0 h-full right-0 fixed z-30 bg-[#a6b9c9e6]   w-[70%]   text-black  flex-col   `}
     >
       <div className="w-full h-1/2 justify-evenly  items-center  relative flex flex-col ">
         <p

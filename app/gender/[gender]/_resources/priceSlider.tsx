@@ -34,14 +34,14 @@ const PriceSlider: React.FC = () => {
           },
         ]}
       />
-      <div className="flex justify-between w-full mt-4">
+      <div className="flex justify-between w-full mt-4 ">
         <div className="relative">
-          <div className="absolute -bottom-7 left-0 w-16 bg-[#ffffffa0] text-center text-mainTextCol p-1 rounded-md shadow-lg text-lg">
+          <div className="absolute -bottom-7 left-0 w-16 bg-[#ffffffa0] text-center text-mainTextCol p-1 rounded-md  shadow-custom-shadow text-lg">
             ₾{priceRange[0]}
           </div>
         </div>
         <div className="relative">
-          <div className="absolute -bottom-7 right-0 w-16 bg-[#ffffffa0] text-center text-mainTextCol p-1 rounded-md shadow-lg text-lg">
+          <div className="absolute -bottom-7 right-0 w-16 bg-[#ffffffa0] text-center text-mainTextCol p-1 rounded-md shadow-custom-shadow text-lg">
             ₾{priceRange[1]}
           </div>
         </div>

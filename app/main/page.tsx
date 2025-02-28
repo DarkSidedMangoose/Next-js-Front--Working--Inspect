@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function page() {
   return (
-    <div className=" MainPageContainerGridding bg-colorLightGreen">
+    <div className=" MainPageContainerGridding bg-[#a6b9c974]">
       <Link
         href="/gender/womans"
         className="w-full h-full flex justify-end items-top grid-1-element"

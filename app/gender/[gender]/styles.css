@@ -8,6 +8,17 @@
 .font-vintage {
   font-family: "Vintage" !important;
 }
+.mainGridGender {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+.gridOfGenderSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
 
 .placeholder-style::placeholder {
   font-size: 1.125rem;

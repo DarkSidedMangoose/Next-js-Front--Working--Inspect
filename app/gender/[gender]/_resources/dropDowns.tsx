@@ -22,7 +22,7 @@ const DropDowns: React.FC<DropDownSizesProps> = ({
       <select
         value={selected}
         onChange={onChange}
-        className="block w-full mt-1 border bg-[#ffffffa0]  border-gray-300 h-5/6 rounded-lg shadow-sm  outline-none"
+        className="block w-full mt-1 border bg-[#ffffffa0]  border-gray-300 h-5/6 rounded-lg   outline-none shadow-custom-shadow"
       >
         <option value="" disabled>
           {whichOne === "size" ? "Select a size" : "select a model"}
