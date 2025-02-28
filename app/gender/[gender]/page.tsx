@@ -6,6 +6,7 @@ import DropDowns from "./_resources/dropDowns";
 import { useState, useEffect } from "react";
 import PriceSlider from "./_resources/priceSlider";
 import Link from "next/link";
+import NavbarSlide from "./_resources/navbarSlide";
 
 interface GenderProductProps {
   params: Promise<{ gender: string }>;
@@ -16,6 +17,7 @@ const GenderProduct: React.FC<GenderProductProps> = ({ params }) => {
   const [model, setModel] = useState<string>("");
   const [identifyGenderWhole, setIdentifyGenderWhole] = useState<string>("");
   const [identifyGender, setIdentifyGender] = useState<string[]>([]);
+  const [navbarClicked, setNavbarClicked] = useState<boolean | null>(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -26,7 +28,9 @@ const GenderProduct: React.FC<GenderProductProps> = ({ params }) => {
     }
     fetchData();
   }, [params]);
-
+  const handleNavbarClick = (arg: boolean) => {
+    setNavbarClicked(arg);
+  };
   const sizes = ["sm", "m", "lg", "xl", "2xl"];
   const models = ["Zara", "Boss", "Levi's", "Calvin Klein"];
   const navs = [
@@ -43,6 +47,10 @@ const GenderProduct: React.FC<GenderProductProps> = ({ params }) => {
 
   return (
     <div className="bg-colorLightGreen w-screen h-screen flex flex-col items-center">
+      <NavbarSlide
+        navbarClicked={navbarClicked}
+        onClickHandler={handleNavbarClick}
+      />
       <header className="flex w-full   h-[100px]  text-3xl justify-center items-center font-vintage">
         {identifyGender.map((e, i) => (
           <p
@@ -56,6 +64,7 @@ const GenderProduct: React.FC<GenderProductProps> = ({ params }) => {
       <aside className="w-full h-12 flex justify-end items-center  ">
         <Image
           src={Navbar}
+          onClick={() => setNavbarClicked(true)}
           alt="navbar"
           className="h-full w-auto pr-3 xsToMedium:hidden"
         />

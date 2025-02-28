@@ -41,3 +41,32 @@
   grid-column: 2/3;
   grid-row: 4/5;
 }
+
+.animation {
+  transition: right 0.5s, transform 0.5s;
+  animation: shows 0.5s forwards;
+}
+
+.animation-back {
+  transition: right 0.5s, transform 0.5s;
+  animation: back 0.5s forwards;
+}
+
+@keyframes shows {
+  from {
+    right: -70%;
+  }
+  to {
+    right: 0%;
+  }
+}
+
+@keyframes back {
+  from {
+    right: 0;
+  }
+  to {
+    display: none;
+    right: -70%;
+  }
+}
