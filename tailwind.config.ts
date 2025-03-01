@@ -29,6 +29,9 @@ export default {
         brown: "#8A6D3B",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        georgian: ["var(--font-noto-serif-georgian)", "serif"],
+      },
     },
   },
   plugins: [

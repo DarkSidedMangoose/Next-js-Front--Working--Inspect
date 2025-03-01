@@ -8,22 +8,7 @@
 .font-vintage {
   font-family: "Vintage" !important;
 }
-.mainGridGender {
-  display: grid;
-  place-items: center;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-}
-.gridOfGenderSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-}
 
-.placeholder-style::placeholder {
-  font-size: 1.125rem;
-  color: #734646;
-}
 .grid-section {
   display: grid;
   grid-template-rows: 1fr 1fr 1.3fr 1.3fr;
@@ -53,31 +38,10 @@
   grid-row: 4/5;
 }
 
-.animation {
-  transition: right 0.5s, transform 0.5s;
-  animation: shows 0.5s forwards;
-}
-
-.animation-back {
-  transition: right 0.5s, transform 0.5s;
-  animation: back 0.5s forwards;
-}
-
-@keyframes shows {
-  from {
-    right: -70%;
-  }
-  to {
-    right: 0%;
-  }
-}
-
-@keyframes back {
-  from {
-    right: 0;
-  }
-  to {
-    display: none;
-    right: -70%;
-  }
+.GenderMainGapping {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  grid-template-rows: auto;
+  row-gap: 53px;
 }
