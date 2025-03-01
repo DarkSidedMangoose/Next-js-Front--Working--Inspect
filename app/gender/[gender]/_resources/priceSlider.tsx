@@ -10,42 +10,36 @@ const PriceSlider: React.FC = () => {
   };
 
   return (
-    <div className="w-[calc(100%-0.75rem)] h-5/6  flex flex-col r ml-3 relative">
+    <div className="w-[85%] h-[50px]     flex flex-col   relative">
+      <div className="w-full h-[30px] flex justify-between items-start  ">
+        <p className="text-sm ">ფასი:</p>
+        <p className="text-sm">
+          ₾: {priceRange[0]}-{priceRange[1]}
+        </p>
+      </div>
       <Slider
         range
         min={0}
         max={200}
         value={priceRange}
         onChange={(e) => Array.isArray(e) && handleChange(e)}
-        trackStyle={[{ backgroundColor: "#734646" }]} // Change track color
+        trackStyle={[{ backgroundColor: "#D9D9D9" }]} // Change track color
         railStyle={{ backgroundColor: "#ddd" }} // Change rail color
         handleStyle={[
           {
-            backgroundColor: "#C1C08E",
-            borderColor: "#734646",
+            backgroundColor: "black",
+            borderColor: "black",
             outline: "none",
             boxShadow: "none",
           },
           {
-            backgroundColor: "#C1C08E",
-            borderColor: "#734646",
+            backgroundColor: "black",
+            borderColor: "black",
             outline: "none",
             boxShadow: "none",
           },
         ]}
       />
-      <div className="flex justify-between w-full mt-4 ">
-        <div className="relative">
-          <div className="absolute -bottom-7 left-0 w-16 bg-[#ffffffa0] text-center text-mainTextCol p-1 rounded-md  shadow-custom-shadow text-lg">
-            ₾{priceRange[0]}
-          </div>
-        </div>
-        <div className="relative">
-          <div className="absolute -bottom-7 right-0 w-16 bg-[#ffffffa0] text-center text-mainTextCol p-1 rounded-md shadow-custom-shadow text-lg">
-            ₾{priceRange[1]}
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

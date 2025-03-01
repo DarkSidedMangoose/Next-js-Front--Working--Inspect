@@ -29,6 +29,9 @@ export default {
         brown: "#8A6D3B",
         foreground: "var(--foreground)",
       },
+      stroke: {
+        "custom-gray": "#d9d9d9",
+      },
       fontFamily: {
         georgian: ["var(--font-noto-serif-georgian)", "serif"],
       },

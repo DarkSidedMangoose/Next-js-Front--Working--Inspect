@@ -14,22 +14,18 @@ const DropDowns: React.FC<DropDownSizesProps> = ({
   onChange,
 }) => {
   return (
-    <div
-      className={`relative ${
-        whichOne === "size" ? "w-[calc(100%-0.75rem)]" : "w-[calc(100%-1.5rem)]"
-      }  h-5/6 text-lg ml-3 flex `}
-    >
+    <div className="w-full h-[33px] rounded-xl border-[#D9D9D9] border-[1px] outline-none bg-white px-2 ">
       <select
+        className="w-full outline-none h-full"
         value={selected}
         onChange={onChange}
-        className="block w-full mt-1 border bg-[#ffffffa0]  border-gray-300 h-5/6 rounded-lg   outline-none shadow-custom-shadow"
       >
-        <option value="" disabled>
-          {whichOne === "size" ? "Select a size" : "select a model"}
+        <option>
+          {whichOne === "size" ? "აირჩიეთ ზომა" : "აირჩიეთ მოდელი"}
         </option>
-        {identifier.map((size) => (
-          <option key={size} value={size}>
-            {size}
+        {identifier.map((e, i) => (
+          <option className="w-full" key={i} value={e}>
+            {e}
           </option>
         ))}
       </select>
