@@ -43,7 +43,7 @@ const Filter: React.FC<{
         <Image
           src={Close}
           alt="cleanButton"
-          className="cursor-pointer w-5 h-5 "
+          className="cursor-pointer w-5 h-5 2xl:hidden "
           onClick={handleSetFilter}
         ></Image>
       </div>
