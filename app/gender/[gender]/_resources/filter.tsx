@@ -4,9 +4,52 @@ import Exit from "../../../../public/x.png";
 import Close from "../../../../public/closes.png";
 import DropDowns from "./dropDowns";
 import PriceSlider from "./priceSlider";
+import Filter from "../../../../public/filter3.png";
+
 import "../styles.css";
 
-const Filter: React.FC<{
+const WholeFilter = () => {
+  const [filter, setFilter] = useState<boolean | null>(true);
+  const handleSetFilter = useCallback((arg: boolean) => {
+    setFilter(arg);
+  }, []);
+  const submitHandler = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }, []);
+  return (
+    <>
+      <section
+        className={` ${
+          filter === null ? "h-12 w-12 " : !filter ? "h-12 w-12 4" : "hidden"
+        } fixed flex justify-center items-center top-[20%] left-2 `}
+      >
+        <Image
+          src={Filter}
+          alt="Filter"
+          onClick={() => setFilter(true)}
+          className={`${
+            filter ? "hidden" : ""
+          } w-full h-full cursor-pointer 2xl:hidden `}
+        ></Image>
+      </section>
+      <div
+        className={`fixed z-30 top-[20%] w-[241px] h-[399px]  flex justify-center items-center shadow-lg   ${
+          filter === null ? "" : !filter ? "animation-off" : "animation-on"
+        } `}
+      >
+        <Filters
+          submitHandler={submitHandler}
+          setFilter={handleSetFilter}
+          filter={filter}
+        />
+      </div>
+    </>
+  );
+};
+
+export default WholeFilter;
+
+const Filters: React.FC<{
   filter: boolean | null;
   setFilter: (arg: boolean) => void;
   submitHandler: (e: React.FormEvent<HTMLFormElement>) => void;
@@ -35,7 +78,7 @@ const Filter: React.FC<{
   }, [filter]);
   return (
     <div
-      className={`fixed top-[20%] w-[240px] h-[399px] bg-[#FEF7FF] flex justify-center items-center shadow-lg   ${
+      className={`fixed top-[20%]   w-[240px] h-[399px] bg-[#FEF7FF] flex justify-center items-center shadow-lg   ${
         filters === null ? "" : !filters ? "animation-off" : "animation-on"
       } `}
     >
@@ -87,5 +130,3 @@ const Filter: React.FC<{
     </div>
   );
 };
-
-export default Filter;
